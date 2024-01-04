@@ -1,0 +1,16 @@
+<div>
+  <table id="notes" class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Note</th>
+        <th>Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{content|safe}}
+    </tbody>
+  </table>
+  <p>
+  <a href="/static/files/notes.json" download id="download-notes" class="link-success">Download your notes</a>
+  </p>
+</div>

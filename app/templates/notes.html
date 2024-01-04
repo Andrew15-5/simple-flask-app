@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Notes{% endblock %}
+{% set notes=" active" %}
+{% block header %}
+  {{ super() }}
+{% endblock %}
+{% block main %}
+  <br>
+  <h3> Add new note </h3>
+  <form id="add-note" method="POST">
+    <div class="mb-3">
+      <label class="form-label">Note name</label>
+      <input type="text" class="form-control" name="name" required style="width: 300px;">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Note content</label>
+      <textarea name="content" class="form-control" style="width: 300px; height: 200px;"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Add new note</button>
+  </form>
+{% endblock %}
+{% block body %}
+  {{ super() }}
+  <script src="/static/js/add_note.js"></script>
+  <script src="/static/js/load_notes.js"></script>
+{% endblock %}

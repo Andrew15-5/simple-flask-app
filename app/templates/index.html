@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Skrillex{% endblock %}
+{% set home=" active" %}
+{% block header %}
+  {{ super() }}
+{% endblock %}
+{% block main %}
+  <h1>Skrillex - EDM artist</h1>
+
+  <div style="display: flex;">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Authors</th>
+        <th>Track</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td rowspan="6">Skrillex</td>
+        <td>First of the Year (Equinox)</td>
+      </tr>
+
+      <tr>
+        <td>Kill EVERYBODY</td>
+      </tr>
+
+      <tr>
+        <td>Recess</td>
+      </tr>
+
+      <tr>
+        <td>Right In</td>
+      </tr>
+
+      <tr>
+        <td>Rock 'n' Roll (Will Take You to the Mountain)</td>
+      </tr>
+
+      <tr>
+        <td>Ruffneck - Full Flex</td>
+      </tr>
+
+      <tr>
+        <td rowspan="2">Skrillex, Sirah</td>
+        <td>Bangarang (feat. Sirah)</td>
+      </tr>
+
+      <tr>
+        <td>Kyoto (feat. Sirah)</td>
+      </tr>
+
+      <tr>
+        <td>Benny Benassi, Gary Go, Skrillex</td>
+        <td>Cinema - Skrillex Remix</td>
+      </tr>
+
+      <tr>
+        <td>Pendulum, Skrillex</td>
+        <td>The Island, Pt. 1 (Dawn) - Skrillex Remix</td>
+      </tr>
+
+      <tr>
+        <td>Skrillex, BEAM</td>
+        <td>Mumbai Power</td>
+      </tr>
+
+      <tr>
+        <td>Skrillex, Damian Marley</td>
+        <td>Make It Bun Dem</td>
+      </tr>
+
+      <tr>
+        <td>Skrillex, Ragga Twins, Zomboy</td>
+        <td>Ragga Bomb (feat. Ragga Twins) - Skrillex & Zomboy Remix</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="width: 100%; margin-left: 1rem;">
+    <p>Some of the album covers:</p>
+    <div id="covers">
+    {% for i in range(1, 4) %}
+      <div class="cover">
+        <img src="/static/images/covers/{{"cover%s.jpg" % i}}"
+             alt="{{"Cover %s from Skrillex album" % i}}">
+      </div>
+    {% endfor %}
+    </div>
+  </div></div>
+{% endblock %}

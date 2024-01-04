@@ -1,0 +1,29 @@
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+#covers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  margin: 0 10px;
+}
+
+.cover {
+  width: 35vh;
+  margin-left: 1vh;
+  margin-top: 1vh;
+  transition: transform 0.5s;
+}
+
+.cover:hover {
+  transform: scale(1.05);
+}
